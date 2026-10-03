@@ -5,3 +5,28 @@
 @media(max-width:1000px){.intro{gap:36px;padding-block:56px}.site-header nav{gap:18px}.concept-tag{display:none}.section-heading{gap:24px}.arch-bottom{grid-template-columns:1fr 1fr}.lab-layout{grid-template-columns:185px 1fr}.investigation{padding:24px}.lab-bar{align-items:flex-start;flex-direction:column;gap:10px}.boundary-grid{gap:24px}}
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.site-header{padding:16px 18px;flex-wrap:wrap;gap:12px}.brand{font-size:1.1rem}.site-header nav{width:100%;justify-content:space-between;gap:12px}.intro{grid-template-columns:1fr;padding-block:40px;gap:28px}.intro h1{font-size:3.2rem}.loop-preview{box-shadow:6px 6px 0 #e0e8f3}.section-heading{display:block}.section-heading>p{max-width:none;margin-top:16px}.lab-bar{padding:16px}.lab-bar label{display:block;width:100%}.lab-bar select{display:block;width:100%;margin-top:8px}.lab-layout{grid-template-columns:1fr}.step-nav{flex-direction:row;overflow-x:auto;padding:12px;border-right:0;border-bottom:1px solid var(--line)}.step-button{white-space:nowrap;padding:10px;font-size:.9375rem;gap:8px}.investigation{padding:22px 18px}.investigation h3{font-size:1.65rem}.evidence-heading{display:block}.evidence-heading span{display:block;margin-top:4px}pre{padding:16px;font-size:.8125rem}.stage-footer .small{display:none}.stage-footer .button{padding:10px 14px}.comparison,.architecture-notes,.boundary-grid,.roadmap,.reference-list{grid-template-columns:1fr;gap:22px}.comparison{padding-top:20px}.comparison article:first-child ul{margin-bottom:0}.agent-section,.boundaries,.build-section,.evaluation-section{padding-top:48px}.architecture-section{margin-top:48px;padding-block:40px}.arch-agent{grid-template-columns:1fr;padding:24px;gap:20px}.state-note{border-left:0;border-top:1px solid #69809f;padding:16px 0 0}.arch-bottom{gap:10px}.arch-bottom article{padding:18px 14px}.arch-bottom h3{font-size:1.1rem}.arch-bottom p{font-size:.9375rem}.source-row{gap:8px}.source-row span{font-size:.875rem}.architecture-notes{margin-top:20px;gap:8px}.boundary-grid{gap:10px}.scope-note{display:block;padding:20px}.scope-note p{margin-top:10px}th,td{padding:14px 12px;font-size:1rem}td:first-child{width:32%}.references{margin-top:48px}.reference-list{gap:4px}footer{flex-wrap:wrap;gap:12px}footer p{width:100%;order:3}.intro h1 br{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Theme preference is applied before the page paints. */
+:root{color-scheme:light}
+.header-tools{display:flex;align-items:center;gap:12px}
+.theme-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:6px;padding:7px 12px;font-size:.9375rem;cursor:pointer;white-space:nowrap}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#101b2b;--ink:#dce8fa;--muted:#afc0d7;--line:#354a65;--blue:#94baff;--pale:#203a5c;--orange:#ffbd91;--green:#94dfb6}
+[data-theme="dark"] :focus-visible{outline-color:#ffbd91}
+[data-theme="dark"] .loop-preview{background:#162c46;box-shadow:12px 12px 0 #0b1422}
+[data-theme="dark"] .loop-top{border-color:var(--line)}
+[data-theme="dark"] .loop-footer{background:#203b5b}
+[data-theme="dark"] .lab-bar,[data-theme="dark"] .architecture-section,[data-theme="dark"] .connector span{background:#17273b}
+[data-theme="dark"] .lab-layout,[data-theme="dark"] .lab-bar select,[data-theme="dark"] .arch-source,[data-theme="dark"] .arch-bottom article,[data-theme="dark"] table{background:#152439}
+[data-theme="dark"] .lab-bar select,[data-theme="dark"] .arch-source,[data-theme="dark"] .arch-bottom article,[data-theme="dark"] .arch-index{border-color:var(--line)}
+[data-theme="dark"] .step-nav{background:#122035}
+[data-theme="dark"] .step-button.active{background:#2b4c75;color:#fff}
+[data-theme="dark"] .step-button:hover:not(.active){background:#203750}
+[data-theme="dark"] pre{background:#0c1726;border:1px solid #2b4260}
+[data-theme="dark"] .primary{color:#102642;background:var(--blue)}
+[data-theme="dark"] .secondary{background:transparent}
+[data-theme="dark"] .stage-state.warning{background:#493024}
+[data-theme="dark"] .stage-state.success{background:#1c3d32}
+[data-theme="dark"] .arch-agent,[data-theme="dark"] th{background:#203b5b}
+[data-theme="dark"] .boundary-grid h3{border-color:var(--line)}
+[data-theme="dark"] .connector::before{background:var(--line)}
+@media(max-width:720px){.header-tools{margin-left:auto}.site-header nav{order:3}[data-theme="dark"] .loop-preview{box-shadow:6px 6px 0 #0b1422}}

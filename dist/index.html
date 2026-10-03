@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { const theme = localStorage.getItem('kubernetes-agent-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
   <title>Kubernetes Agent Lab — From alert to verified recovery</title>
   <meta name="description" content="Explore a DevOps portfolio concept: an AI agent that investigates Kubernetes incidents, proposes a GitOps fix, and verifies recovery. Interactive illustrative walkthrough, architecture, and MVP plan.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23163156'/%3E%3Cpath d='M8 9h5v5H8zm11 9h5v5h-5zM13 11h8v7M10 14v7h9' fill='none' stroke='%2375d6e4' stroke-width='2'/%3E%3C/svg%3E">
@@ -10,7 +11,7 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header class="site-header"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">⌘</span>Kubernetes Agent Lab</a><nav aria-label="Main navigation"><a href="#walkthrough">Walkthrough</a><a href="#architecture">Architecture</a><a href="#build">Build plan</a></nav><span class="concept-tag">Project concept</span></header>
+  <header class="site-header"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">⌘</span>Kubernetes Agent Lab</a><nav aria-label="Main navigation"><a href="#walkthrough">Walkthrough</a><a href="#architecture">Architecture</a><a href="#build">Build plan</a></nav><div class="header-tools"><span class="concept-tag">Project concept</span><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button></div></header>
   <main id="top">
     <section class="intro wrap">
       <div class="intro-copy"><p class="kicker">AI workflows for DevOps</p><h1>From an alert to<br>verified recovery.</h1><p class="lead">Build an agent that investigates a Kubernetes incident, makes a case for a fix, and checks whether it actually worked.</p><p class="intro-note">The operational loop is the project: observe, reason, act with approval, then measure the result.</p></div>

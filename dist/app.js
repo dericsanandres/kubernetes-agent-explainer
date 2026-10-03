@@ -1,4 +1,17 @@
 'use strict';
+const themeToggle = document.getElementById('theme-toggle');
+function updateThemeToggle() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  themeToggle.textContent = dark ? 'Light mode' : 'Dark mode';
+  themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem('kubernetes-agent-theme', theme); } catch {}
+  updateThemeToggle();
+});
+updateThemeToggle();
 const stages = ['Alert', 'Inspect', 'Hypothesize', 'Test', 'Propose', 'Approve', 'Verify'];
 const cases = {
   memory: {
